@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .head{
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            background-color: rgb(1, 0, 0);
+            color: white;
+            font-size: large;
+        }
+        .head1{
+            padding-top: 1%;
+            padding-bottom: 1%;
+            margin-left: 1%;
+            align-items: center;
+            display: flex;
+            justify-content:space-between;
+            margin-right: 8%;
+        }
+        .head2{
+            margin-left: 30%;
+            align-items: center;
+            display: flex;
+            justify-content: space-evenly;
+            margin-right: 1%;
+        }
+        .live{
+            display: flex;
+            margin-top: 30px;
+            font-size: larger;
+            justify-content:space-evenly;
+        }
+        .content{
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+        }
+        .fixed{
+            position:sticky;
+            top: 0;
+
+        }
+        .content2{
+            margin-top: 50px;
+            margin-left: 25px;
+        }
+        .footer{
+            margin-top: 25px;
+            margin-bottom: 25px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background-color: rgb(1, 0, 0);
+            color: white;
+            height: 60px;
+            font-size: large;
+        }
+        .footer1{
+            margin-left: 2%;
+            align-items: center;
+            display: flex;
+        }
+        .bot-cnn{
+            height: 43px;
+        }
+        .footer2{
+            margin-left: 35%;
+            align-items: center;
+            display: flex;
+            justify-content:space-between;
+            margin-right: 2%;
+        }
+        .navigation{
+            width: 35px;
+            height: 5px;
+            margin: 6px 0;
+            background-color:white;
+        }
+        .marge{
+            margin-top: 30px;
+        }
+        .bottom{
+           margin-left: 1%;
+           margin-right: 1%;
+           display: flex;
+           color: white;
+           justify-content: space-between;
+           padding-bottom: 1%;
+           padding-left: 1%; 
+           font-size: small;
+        }
+        img{
+            object-fit:cover;
+        }
+           input{
+            border-radius: 10px;
+            margin-top: 5%;
+            margin-left: 2%;
+            margin-right: 1%;
+            font-size: 20px;
+            padding: 10px;
+            align-items: center;
+            width: 95%;
+            border: 2px solid rgb(43, 37, 37);
+            background: #f1f1f1;
+        }
+
+        @media screen and (max-width: 600px) {
+            .navs{
+                display:none;
+            }
+            .twonavs{
+            justify-content: space-evenly;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            padding-left: 7px;
+            }
+            .head{
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            background-color: rgb(1, 0, 0);
+            color: white;
+            font-size: small;
+        }
+            .head2{
+            align-items: center;
+            display: flex;
+            justify-content: space-evenly;
+        }
+            .live{
+            justify-content: center;
+            display:grid;
+            font-size: small;
+            margin-top: 10px;
+        }
+        .content{
+            display: grid;
+            grid-template-columns: auto;
+        }
+        .footer{
+            background-color: rgb(1, 0, 0);
+            color: white;
+            height: 100px;
+            font-size: small;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .footer1{
+            align-items: center;
+            justify-content: center;
+            margin-top: 1%;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+        .bot-cnn{
+            height: 35px;
+        }
+        .footer2{
+            justify-content: space-between;
+            margin-top: 5%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            text-align: center;
+            margin-right: 35%;
+            gap: 2%;
+        }
+        .nav-foot{
+            display: none
+        }
+        .bottom{
+           text-align: center;
+           display:inline;
+           justify-content:space-between;
+           padding-bottom: 2%;
+           font-size: 15%;
+        }
+        }
+
+    </style>
+</head>
+<body>
+  <div class="fixed">
+    <div class="head">
+        <div class="head1">
+            <div class="twonavs">
+                <div class="navigation"></div>
+                <div class="navigation"></div>
+                <div class="navigation"></div>
+            </div>
+            <img class="twonavs" style="height: 50px;" src="images/cnn.png" alt="">
+            <div class="navs">US</div>
+            <div class="navs">World</div>
+            <div class="navs">Politics</div>
+            <div class="navs">Business</div>
+            <div class="navs">Opinion</div>
+            <div class="navs">Health</div>
+            <div class="navs">Entertainment</div>
+            <div class="navs">Style</div>
+            <div class="navs">Travel</div>
+            <div class="navs">Sports</div>
+            <div class="navs">Video</div>
+        </div>
+        <div class="head2">
+            <div>Audio</div>
+            <div>Live TV</div>
+            <img style="height: 30px;" src="images/search3.png" alt="">
+            <div style="border: 2px solid white;border-radius: 5px;padding: 4px;">Log In</div>
+        </div>
+    </div>
+  </div>
+    <div class="live">
+        <div style="display: flex;"> <div style="color: red;font-weight: bold;">Live Updates:</div> <div style="margin-left: 5px;">Ukraine</div> </div>
+        <div style="border-left: 2px solid gray;"></div>
+        <div> Sen.Dianne Feinstein's funeral</div>
+        <div style="display: flex;"><div style="font-weight: bolder;">Trending:</div><div style="margin-left: 5px;">House speaker chaos</div></div>
+        <div style="border-left: 2px solid gray;"></div>
+        <div>Weight loss drugs</div>
+        <div style="border-left: 2px solid gray;"></div>
+        <div>Pamela Anderson</div>
+        <div style="border-left: 2px solid gray;"></div>
+        <div>Halloween Customes</div>
+        <div style="border-left: 2px solid gray;"></div>
+        <div style="display: flex;"><div style="font-weight: bolder;">Podcast:</div><div style="margin-left: 5px;">5 Things</div></div>
+    </div>
+    <div class="content">
+        <div>
+            <h1 style="font-size: 50px; text-align: center;">A secret newtwork of schools is defying the Taliban</h1>
+            <div style="text-align: center;">
+                <img style="width: 100%;height: 400px;" src="images/pic1.jpeg" alt="">
+            </div>
+            <div style="text-align: center;">
+                <h2>Afghan girls can’t attend school past the 6th grade. This clandestine network is helping them continue their studies.</h2>
+            </div>
+            <hr>
+            <H5>AROUND THE WORLD</H5>
+            <ul>
+                <li><label style="font-weight: bolder;color: red;">Live Updates:</label> <label> Russian missile hit cafe as wake was underway for fallen Ukrainian soldier, official says</label> </li>
+                <li style="margin-top: 20px;"><label>Hand grenade fragments were found in the bodies of the victims on Wagner chief's plane that crashed, Putin says</label> </li>
+                <li style="margin-top: 20px;"><img style="height: 20px; justify-content: center;align-content: center; display:inline-block;" src="images/play2 copy.png" alt=""> <label style="margin-left: 5px;">"Absolutely annihilated": CNN reporter at the scene of a deadly Russian strike</label> </li>
+                <li style="margin-top: 20px;"><label style="font-weight: bolder;color: black;">Opinion:</label> <label> What if Putin's waiting game is starting to pay off?</label> </li>
+                <li style="margin-top: 20px;"><img style="height: 20px; justify-content: center;align-content: center; display:inline-block;" src="images/play2 copy.png" alt=""><label style="margin-left: 5px;">Video shows teen being carried away after alleged assault by morality police
+                </label> </li>
+                <li style="margin-top: 20px;"><label> At least 80 killed and hundreds injured in drone attack on Syria military college</label> </li>
+            </ul>
+        </div>
+        <div class="content2">
+            <img style="height: 250px;width: 100%;" src="images/nfl.webp" alt="">
+            <div>
+               <h2> ‘The ultimate Bear’: NFL legend dies at 80</h2>
+            </div>
+            <img style="height: 250px;width: 100%;" src="images/immigration.jpeg" alt="">
+            <div>
+               <h2> Reality is scrambling the normal immigration rhetoric in uncomfortable ways for Democrats</h2>
+            </div>
+            <img style="height: 250px;width: 100%;" src="images/nursing-staff.jpeg" alt="">
+            <div>
+               <h2>Why nursing schools are turning away thousands of applicants</h2>
+            </div>
+        </div>
+        <div class="content2">
+            <embed style="height: 250px;width: 100%;" src="https://www.youtube.com/embed/SkqBj30gMcw"></embed>
+            <h3 style="text-align: center;">Watch the latest CNN Headlines</h3>
+            <hr style="height:1px;">
+            <div>
+                
+                    <div><label>5 theories why Taylor Swift may be dating Travis Kelce</label> </div>
+                    <hr style="height:1px;">
+                    <div class="marge" ><label>Hand grenade fragments were found in the bodies of the victims on Wagner chief's plane that crashed, Putin says</label> </div>
+                    <hr style="height:1px;">
+                    <div class="marge"><img style="height: 20px; justify-content: center;align-content: center; display:inline-block;" src="images/play2 copy.png" alt=""> <label style="margin-left: 5px;">78-year-old famed sportscaster
+                        explains whv he nas never knowingiv
+                        eaten a vegetable in his life</label> </div>
+                    <hr style="height:1px;">
+                    <div class="marge"><label> In one city, the right to own a car starts at $76.000. That doesn't include the car</label> </div>
+                    <hr style="height:1px;">
+                    <div class="marge"><img style="height: 20px; justify-content: center;align-content: center; display:inline-block;" src="images/play2 copy.png" alt=""><label style="margin-left: 5px;">Video shows teen being carried away after alleged assault by morality police
+                    </label> </div>
+                    <hr style="height:1px;">
+                    <div class="marge"><label> At least 80 killed and hundreds injured in drone attack on Syria military college</label> </div>
+                    <hr style="height:1px;">
+                    <div class="marge"><img style="height: 20px; justify-content: center;align-content: center; display:inline-block;" src="images/play2 copy.png" alt=""><label style="margin-left: 5px;">Video captures moments leading up to fatal stabbing in Brooklyn</div>
+                    <hr style="height:1px;">
+                    <div class="marge"><label> Maren Morris talks leaving the ‘circus’ of country music culture</label> </div> 
+                    <hr style="height:1px;">
+                    <div class="marge"><label> There are cowboy boot Crocs now</label> </div>    
+                    <hr style="height:1px;">
+                    <div class="marge"><label> The Girl Scouts are discontinuing a cult-favorite cookie</label> </div>          
+                    <hr style="height:1px;">
+                    <div class="marge"><img style="height: 20px; justify-content: center;align-content: center; display:inline-block;" src="images/play2 copy.png" alt=""><label style="margin-left: 5px;">How often should you really wash your clothes?</label>
+                     </div>
+            </div>
+        </div>
+    </div>
+    <div style="background-color: black;margin-top: 10%;">
+        <form class="search" action="/action_page.php">
+            <input type="text" placeholder="Search CNN..." name="search">
+        </form>
+        <hr style="margin-top: 5%; background-color:gray; height: 2px;">
+    
+        <div class="footer">
+            <div class="footer1">    
+                <img class="bot-cnn"src="images/cnn.png" alt="">
+            </div>
+            <div class="footer2">
+                <div class="nav-foot">Audio</div>
+                <div class="nav-foot">Live TV</div>
+                <div class="nav-foot" style="color: gray;font-size:40px;font-weight: lighter;">|</div>
+                <div>FOLLOW CNN</div>
+                <img style="height: 30px;" src="images/facebook2-48.png" alt="">
+                <img style="height: 30px;background-color: white;border-radius: 50%;" src="images/twitter.png" alt="">
+                <img style="height: 30px;background-color: white;border-radius: 50%;" src="images/instagram2-48.png" alt="">
+                <div class="nav-foot" style="border: 2px solid white;border-radius: 5px;padding: 4px;">Log In</div>
+            </div>
+        </div>
+        <hr style="background-color:gray; height: 2px;">
+           <div class="bottom">
+               <div>Terms of Use </div>
+               <div>Privacy Policy</div>
+               <div>Cookie Setting</div>
+               <div>Ad Choices</div>
+               <div>Accessibility & CC </div>            
+               <div>About</div>
+               <div>Newsletters</div>
+               <div>Transcripts</div>
+           </div>
+    </div>
+</body>
+</html>
