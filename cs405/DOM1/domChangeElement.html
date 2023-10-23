@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeEle(){
+            //change content inside div 
+        let mydiv =document.querySelector('div')
+            mydiv.innerHTML='mynewdiv';
+        //change content inside pa
+          let myp = document.querySelector('p') 
+             myp.innerHTML="my new paragraph ";  
+         let myinput = document.querySelector('input'); 
+             myinput.value="Edittext"
+        //     console.log(myin);  
+        //change link
+        let anchortag = document.querySelector('a')
+        anchortag.innerHTML="Apple";
+        anchortag.setAttribute('href','https://www.apple.com')
+        //change image
+        let myimg=document.querySelector('img');
+        myimg.innerHTML="nature";
+        myimg.setAttribute('src','natures.jpg')
+        //change value of text input teaxtarea
+        let mytxtarea=document.querySelector("textarea")
+         mytxtarea.value= 'Edit textarea';
+         //change lable and input
+         let mylbl=document.querySelector('label');
+         mylbl.innerHTML="Gender";
+         let inputbox=document.querySelector("input")
+         inputbox.value='my radio'
+         inputbox.setAttribute('type','radio')
+ 
+        }
+    </script>
+</head>
+<body>
+ <h3>Changing TagElements using DOM using</h3>  
+<h4>changing Div element</h4> 
+<div>mydiv</div>  
+<h4>changing paragrapgh element</h4>
+<div><P>my paragraph</P></div>
+<h4>changing Link element(anchor)</h4>
+<div><a href="www.google.com">Google</a></div>
+<h4>changing image element</h4>
+<div><img src="Ginacho.png" width=40 height=40 ;alt="pic">Genache</img>
+</div>
+<h4>changing textarea element</h4>
+<div><textarea>test</textarea></div>
+<h4>changing input text to redio element</h4>
+<div>myinput<input type="text" value="inputtext" /></div>
+<h4>changing Label element</h4>
+<div><label>skill</label></div>
+
+<div><button onclick="changeEle()">changeEle</button></div>
+ 
+
+</body>
+</html>

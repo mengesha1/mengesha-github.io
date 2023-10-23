@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function exc() {
+        //creating an element of div
+        
+          let myDIV = document.createElement('div'); 
+          myDIV.innerHTML = 'creating div';
+          document.body.append(myDIV);
+          
+        //creating an element para
+         mypar = document.createElement('p');
+         mypar.innerHTML='creating paragraph Element ';
+         document.body.append(mypar);
+        //creat an element of undefined list(ul)
+        myul = document.createElement('ul')
+         myul.innerHTML=("firute"+"orange"+"banana");
+         document.body.append(myul);
+       //create anchor element
+       let ancortag=document.createElement('a');
+       ancortag.innerHTML="www.google.com";
+        document.body.append(ancortag);
+      doucment.getElementById('mydiv').append(anchor);
+    let anchor=doucment.createElement('a');
+      document.getElementById('mydiv').append(anchor);
+    //**add content and attribute to the elements ******
+    document.getElementById('myDIV').outerHTML="<div id='myDIV'>DIV<div>"
+    document.getElementById('myp').outerHTML="<p id ='myp'> Love upto grave</P>";
+    doucment.getElementById('ulist').outerHTML="<ul id='ulist'><li>mango<li/></ul>";    
+
+
+
+      }
+</script>
+
+<body>
+    <ul id="ulist">
+        <li>apple</li>
+        <li>orange</li>
+        <li>banana</li>
+        
+        
+    </ul>
+    <div id="myDIV">abcd</div>
+    <p id="myp">this is my paragraph Play ground</p>
+    <button type="submit" onclick="exc();">Submit</button>
+
+
+</body>
+
+</html>

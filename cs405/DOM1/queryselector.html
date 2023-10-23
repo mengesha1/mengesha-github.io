@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            let firuts=['Apple','banana','orange']
+            for(let ele of firuts){
+            let myInput=document.createElement('input');
+             myInput.setAttribute('type', 'checkbox')
+            let mylabel=document.createElement('label');
+            mylabel.innerHTML= ele
+            document.body.append(mylabel)
+            document.body.append(myInput);
+            //myInput.type="checkbox";
+           
+           
+            }
+        }
+    </script>
+</head>
+
+<body>
+</body>
+</html>
