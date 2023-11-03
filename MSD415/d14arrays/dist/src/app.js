@@ -7,16 +7,26 @@ console.log("in app.ts", "sum of [1,2,3] is: ", sum([1, 2, 3]));
  * @returns {number} largest of a, b, c
  */
 export function maxOfThree(aa, b, c) {
-    return 0; //IMPLEMENT THIS -- DO NOT USE MATH.MAX
-}
+    let max = 0;
+    if (aa > b && aa > c)
+        max = aa;
+    else if (b > aa && b > c)
+        max = b;
+    else
+        max = c;
+    return max;
+} //IMPLEMENT THIS -- DO NOT USE MATH.MAX
 /**
  *
  * @param {Array} arr of numbers
  * @returns {number} sum of arr numbers
  */
 export function sum(arr) {
-    //IMPLEMENT THIS 
-    return 0;
+    let sum = 0;
+    for (let ele of arr) {
+        sum += ele;
+    }
+    return sum; //IMPLEMENT THIS 
 }
 /**
  *
@@ -24,8 +34,12 @@ export function sum(arr) {
  * @returns {number} sum of arr numbers
  */
 export function multiply(arr) {
+    let product = 0;
+    for (let ele of arr) {
+        product *= ele;
+    }
+    return product;
     //IMPLEMENT THIS 
-    return 0;
 }
 /* findLongestWord */
 /**
@@ -34,7 +48,15 @@ export function multiply(arr) {
  * @returns {number} length of longest word
  */
 export function findLongestWord(arr) {
-    //IMPLEMENT THIS 
+    //     let longword: number;
+    //     for (let ele of arr){
+    //       longword = ele.length;
+    //     if (longword > ele.length){
+    //         return longword;
+    //     } else{
+    //         return ele.length;
+    //     }
+    // }
     return 0;
 }
 /* 6. Write a function that takes two integers as inputs and returns a 2-dimensional array containing sequential numbers across each row as follows:
