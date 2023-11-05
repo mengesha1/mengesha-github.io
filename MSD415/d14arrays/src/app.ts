@@ -21,8 +21,6 @@ export function maxOfThree(aa: number, b: number, c: number): number {
     return max;
 }  //IMPLEMENT THIS -- DO NOT USE MATH.MAX
 
-
-
 /**
  * 
  * @param {Array} arr of numbers
@@ -52,8 +50,6 @@ export function multiply(arr: number[]): number {
     //IMPLEMENT THIS 
 }
 
-
-
 /* findLongestWord */
 /**
  * takes an array of words and returns the length of the longest one
@@ -72,7 +68,7 @@ export function findLongestWord(arr: string[]): number {
 }
 // //reverse array
 
-function reverseArray(arr: string[]) {
+export function reverseArray(arr: string[]) {
     const arrCopy: string[] = [];
     for (let i: number = arr.length - 1; i >= 0; i--) {
         const valueindex = arr[i];
@@ -80,7 +76,8 @@ function reverseArray(arr: string[]) {
     }
     return arrCopy;
 }
-function reverseArrayInPlace(arr: number[]) {
+
+export function reverseArrayInPlace(arr: number[]) {
     const arrCopy: number[] = [];
     for (let i: number = arr.length - 1; i >= 0; i--) {
         const valueindex = arr[i];
@@ -103,13 +100,13 @@ describe("generate array", function () {
  * @param {*} cols num cols
  * @returns {Array} 2d array with entries i + j
  */
-export function generateArray(row:number,col:number): number[][] {
+export function generateArray(rows:number,cols:number): number[][] {
 
     const matrix: number[][] = [];
     let count = 1;
-    for (let i = 0; i < row; i++) {
+    for (let i = 0; i < rows; i++) {
         matrix.push([]);
-        for (let j = 0; j < col; j++) {
+        for (let j = 0; j < cols; j++) {
             matrix[i].push(count);
             count++;
         }
