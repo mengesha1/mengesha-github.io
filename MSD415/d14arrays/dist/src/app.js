@@ -48,17 +48,33 @@ export function multiply(arr) {
  * @returns {number} length of longest word
  */
 export function findLongestWord(arr) {
-    //     let longword: number;
-    //     for (let ele of arr){
-    //       longword = ele.length;
-    //     if (longword > ele.length){
-    //         return longword;
-    //     } else{
-    //         return ele.length;
-    //     }
-    // }
-    return 0;
+    let longword = 0;
+    for (let ele of arr) {
+        const currentLength = ele.length;
+        if (currentLength > longword) {
+            longword = currentLength;
+        }
+    }
+    return longword;
 }
+// //reverse array
+export function reverseArray(arr) {
+    const arrCopy = [];
+    for (let i = arr.length - 1; i >= 0; i--) {
+        const valueindex = arr[i];
+        arrCopy.push(valueindex);
+    }
+    return arrCopy;
+}
+export function reverseArrayInPlace(arr) {
+    const arrCopy = [];
+    for (let i = arr.length - 1; i >= 0; i--) {
+        const valueindex = arr[i];
+        arrCopy.push(valueindex);
+    }
+    return arrCopy;
+}
+// 
 /* 6. Write a function that takes two integers as inputs and returns a 2-dimensional array containing sequential numbers across each row as follows:
 describe("generate array", function () {
     const expected33 = [ [1, 2, 3], [4, 5, 6], [7, 8, 9]];
@@ -72,6 +88,14 @@ describe("generate array", function () {
  * @returns {Array} 2d array with entries i + j
  */
 export function generateArray(rows, cols) {
-    //IMPLEMENT THIS 
-    return [[0]];
+    const matrix = [];
+    let count = 1;
+    for (let i = 0; i < rows; i++) {
+        matrix.push([]);
+        for (let j = 0; j < cols; j++) {
+            matrix[i].push(count);
+            count++;
+        }
+    }
+    return matrix;
 }
