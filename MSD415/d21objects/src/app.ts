@@ -6,29 +6,29 @@ type student={
 }
 
 
-student1={
+const student1 = {
     studentid:101,
     quizAnswers: [1, 1, 2, 4]
 }
-student2={
+const student2 = {
     studentid: 102,
     quizAnswers: [2, 1, 2, 2]
 }
-student3={
+const student3 = {
     studentid: 103,
     quizAnswers: [3, 1, 3, 4]
 }
-console.log ("expect3:",computestudentscore(student1))
-function computrScoeestudent(stu:student,quizKey:number[]):number{
+console.log ("expect3:",computestudentScore(student1));
+function computesScoestudent(stu:student,quizKey:number[]):number{
     //get the student answer
-    const answer=stu.quizAnswers;
-    let numcorrect;
+    const answer = stu.quizAnswers;
+    let numCorrect;
     for(let i=0;i<answer.length;i++){
-        if(answer[i]==quizkey[i]){
-            numcorrect.push(i);
+        if(answer[i]===quizkey[i]){
+            numCorrect.push(i);
 
         }
     }
-    return numcorrect;
+    return numCorrect;
 }
 

@@ -1,5 +1,5 @@
 /* comment out the import assert line (in /dist/test js mocha file) when running in the browser */
-import { assert } from "chai";
+// import { assert } from "chai";
 //import {maxOfThree, sum, multiply, findLongestWord, reverseArray, reverseArrayInPlace, scoreExams, generateArray} from "./arrays.js";
 import { maxOfThree, sum, multiply, findLongestWord, generateArray, reverseArray, reverseArrayInPlace } from "../src/app.js";
 /* 1.	1.	Define a function maxOfThree() that takes three numbers as
@@ -83,13 +83,13 @@ describe("reverseArray", function () {
         assert.deepEqual(reverseArray(["A", "B", "C"]), ["C", "B", "A"]);
     });
     it("tests reverse even number elements", function () {
-        assert.deepEqual(reverseArrayInPlace(["A", "B", "C", "D"]), ["D", "C", "B", "A"]);
+        assert.deepEqual(reverseArray(["A", "B", "C", "D"]), ["D", "C", "B", "A"]);
     });
     it("tests reverse in place even number elements", function () {
         assert.deepEqual(reverseArray(["A", "B", "C", "D"]), ["D", "C", "B", "A"]);
     });
     it("tests reverse odd number elements", function () {
-        assert.deepEqual(reverseArray([1, 2, 3, 4, 5]), [5, 4, 3, 2, 1]);
+        assert.deepEqual(reverseArrayInPlace([1, 2, 3, 4, 5]), [5, 4, 3, 2, 1]);
     });
     it("tests reverseinplace odd number elements", function () {
         assert.deepEqual(reverseArrayInPlace([1, 2, 3, 4, 5]), [5, 4, 3, 2, 1]);
@@ -135,3 +135,27 @@ describe("generate array", function () {
         assert.deepEqual(generateArray(2, 1), expected21);
     });
 });
+///assignment
+// describe("doubleNumber", function () {
+//     it("tests dldoubleNumber", function () {
+//         assert.strictEqual(doubleNumber([1,2,3,4,5])[2,4,6,8,10]);
+//     })
+// });
+// // describe("doubleNumber", function () {
+// //     it("tests dldoubleNumber", function () {
+// //         assert.strictEqual(doubleNumber([1, 2, 3, 4, 5])[2, 4, 6, 8, 10]);
+// //     })
+// // });
+// // describe("hundredTimes", function () {
+// //     it("tests hundredTimes", function () {
+// //         assert.strictEqual(hundredTimes([1, 2, 3, 4, 5])[100, 200, 300,400, 5000]);
+// //     })
+// // });
+// describe(" testing myMap", function () {
+//     it("tests doubleNumber", function () {
+//         assert.strictEqual(myMap([1, 2, 3],doubleNumber)[2, 4, 6]);
+//     })
+//     it("tests hundredTimes", function () {
+//         assert.strictEqual(myMap([1, 2, 3], hundredTimes)[100, 200, 300]);
+//     })
+// });

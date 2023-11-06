@@ -7,14 +7,12 @@ console.log("in app.ts", "sum of [1,2,3] is: ", sum([1, 2, 3]));
  * @returns {number} largest of a, b, c
  */
 export function maxOfThree(aa, b, c) {
-    let max = 0;
-    if (aa > b && aa > c)
-        max = aa;
-    else if (b > aa && b > c)
-        max = b;
+    if (aa >= b && aa >= c)
+        return aa;
+    else if (b >= aa && b >= c)
+        return b;
     else
-        max = c;
-    return max;
+        return c;
 } //IMPLEMENT THIS -- DO NOT USE MATH.MAX
 /**
  *
@@ -34,7 +32,7 @@ export function sum(arr) {
  * @returns {number} sum of arr numbers
  */
 export function multiply(arr) {
-    let product = 0;
+    let product = 1;
     for (let ele of arr) {
         product *= ele;
     }
@@ -57,22 +55,25 @@ export function findLongestWord(arr) {
     }
     return longword;
 }
- //reverse array
+// //reverse array
 export function reverseArray(arr) {
     const arrCopy = [];
     for (let i = arr.length - 1; i >= 0; i--) {
-        const valueindex = arr[i];
+        let valueindex = arr[i];
         arrCopy.push(valueindex);
     }
     return arrCopy;
 }
 export function reverseArrayInPlace(arr) {
     const arrCopy = [];
-    for (let i = arr.length - 1; i >= 0; i--) {
-        const valueindex = arr[i];
-        arrCopy.push(valueindex);
+    for (let i = 0; i < Math.floor(arr.length / 2); i++) {
+        [arr[i], arr[arr.length - 1 - i]] = [arr[arr.length - 1 - i], arr[i]];
+        // for (let i = arr.length - 1; i >= 0; i--) {
+        //     let valueindex = arr[i];
+        //     arrCopy.push(valueindex);
+        // }
     }
-    return arrCopy;
+    return arr;
 }
 // 
 /* 6. Write a function that takes two integers as inputs and returns a 2-dimensional array containing sequential numbers across each row as follows:
@@ -99,3 +100,21 @@ export function generateArray(rows, cols) {
     }
     return matrix;
 }
+///////////////////
+// //Write a function, double, that takes a number and returns 2 times the number.
+// export function doubleNumber(num: number): number {
+//     return num * 2;
+// }
+// //. Write a function times100 that takes a number and returns 100 times the number.function doubleNumber(num:number):number{
+// export function hundredTimes(num: number): number {
+//     return num * 100;
+// }
+// export function myMap(numbers: number[], callBack: (n: number) => number): number[] {
+//     let funarry: number[] = [];
+//     for (let i = 0; i < numbers.length; i++) {
+//         funarry.push(callBack[numbers[i]]);
+//     }
+//     return funarry;
+// }
+// let arr = [1, 2, 3];
+// const out = console.log(myMap(arr, doubleNumber))
