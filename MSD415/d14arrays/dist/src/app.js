@@ -57,7 +57,7 @@ export function findLongestWord(arr) {
     }
     return longword;
 }
-// //reverse array
+ //reverse array
 export function reverseArray(arr) {
     const arrCopy = [];
     for (let i = arr.length - 1; i >= 0; i--) {
