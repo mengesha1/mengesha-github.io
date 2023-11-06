@@ -1,5 +1,4 @@
 
-
 console.log("in app.ts", "sum of [1,2,3] is: ", sum([1, 2, 3]));
 /**
  * 
@@ -109,3 +108,32 @@ export function generateArray(rows:number,cols:number): number[][] {
     }
     return matrix;
 }
+
+///////////////////
+
+//Write a function, double, that takes a number and returns 2 times the number.
+export function doubleNumber(num: number): number {
+
+    return num * 2;
+
+}
+
+//. Write a function times100 that takes a number and returns 100 times the number.function doubleNumber(num:number):number{
+
+
+
+export function hundredTimes(num: number): number {
+    return num * 100;
+}
+
+export function myMap(numbers: number[], callBack: (n: number) => number): number[] {
+    let funarry: number[] = [];
+
+    for (let i = 0; i < numbers.length; i++) {
+        funarry.push(callBack[numbers[i]]);
+    }
+    return funarry;
+}
+let arr = [1, 2, 3];
+const out = console.log(myMap(arr, doubleNumber))
+

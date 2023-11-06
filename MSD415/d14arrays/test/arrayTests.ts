@@ -2,7 +2,7 @@
 import { assert } from "chai"
 
 //import {maxOfThree, sum, multiply, findLongestWord, reverseArray, reverseArrayInPlace, scoreExams, generateArray} from "./arrays.js";
-import { maxOfThree, sum, multiply, findLongestWord, generateArray, reverseArray, reverseArrayInPlace } from "../src/app.js";
+import { maxOfThree, sum, multiply, findLongestWord, generateArray, reverseArray, reverseArrayInPlace, doubleNumber, myMap, hundredTimes } from "../src/app.js";
      
 /* 1.	1.	Define a function maxOfThree() that takes three numbers as 
 arguments and returns the largest of them.  */
@@ -145,4 +145,31 @@ describe("generate array", function () {
     it("expected21", function () {
         assert.deepEqual(generateArray(2, 1), expected21);
     });
+});
+
+///assignment
+
+describe("doubleNumber", function () {
+    it("tests dldoubleNumber", function () {
+        assert.strictEqual(doubleNumber([1,2,3,4,5])[2,4,6,8,10]);
+    })
+});
+// describe("doubleNumber", function () {
+//     it("tests dldoubleNumber", function () {
+//         assert.strictEqual(doubleNumber([1, 2, 3, 4, 5])[2, 4, 6, 8, 10]);
+//     })
+// });
+
+// describe("hundredTimes", function () {
+//     it("tests hundredTimes", function () {
+//         assert.strictEqual(hundredTimes([1, 2, 3, 4, 5])[100, 200, 300,400, 5000]);
+//     })
+// });
+describe(" testing myMap", function () {
+    it("tests doubleNumber", function () {
+        assert.strictEqual(myMap([1, 2, 3],doubleNumber)[2, 4, 6]);
+    })
+    it("tests hundredTimes", function () {
+        assert.strictEqual(myMap([1, 2, 3], hundredTimes)[100, 200, 300]);
+    })
 });
