@@ -23,7 +23,7 @@ export function maxOfThree(aa: number, b: number, c: number): number {
  * @returns {number} sum of arr numbers
  */
 export function sum(arr: number[]): number {
-    let sum: number = 0;
+    let sum = 0;
     for (let ele of arr) {
         sum += ele;
     }
@@ -38,7 +38,7 @@ export function sum(arr: number[]): number {
  */
 export function multiply(arr: number[]): number {
 
-    let product: number = 0;
+    let product = 1;
     for (let ele of arr) {
         product *= ele;
     }
@@ -66,7 +66,7 @@ export function findLongestWord(arr: string[]): number {
 
 export function reverseArray(arr: string[]) {
     const arrCopy: string[] = [];
-    for (let i: number = arr.length - 1; i >= 0; i--) {
+    for (let i = arr.length-1; i >=0; i--) {
         const valueindex = arr[i];
         arrCopy.push(valueindex);
     }
@@ -75,7 +75,7 @@ export function reverseArray(arr: string[]) {
 
 export function reverseArrayInPlace(arr: number[]) {
     const arrCopy: number[] = [];
-    for (let i: number = arr.length - 1; i >= 0; i--) {
+    for (let i = arr.length - 1; i >= 0; i--) {
         const valueindex = arr[i];
         arrCopy.push(valueindex);
     }
