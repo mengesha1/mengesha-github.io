@@ -18,15 +18,14 @@ const student3 = {
     studentid: 103,
     quizAnswers: [3, 1, 3, 4]
 }
-console.log ("expect3:",computestudentScore(student1));
-function computesScoestudent(stu:student,quizKey:number[]):number{
+console.log("expect3:", computesScoestudent(student1));
+function computesScoestudent(stu:student,quizKey:number[]):[]number{
     //get the student answer
     const answer = stu.quizAnswers;
-    let numCorrect;
+    let numCorrect:number[]=[];
     for(let i=0;i<answer.length;i++){
-        if(answer[i]===quizkey[i]){
+        if(answer[i]=== quizKey[i]){
             numCorrect.push(i);
-
         }
     }
     return numCorrect;

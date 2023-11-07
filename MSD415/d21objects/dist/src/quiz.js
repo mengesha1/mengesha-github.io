@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.gradeQuiz = exports.gradeStudent = void 0;
+
 function gradeStudent(studentAnswers, correct) {
     //IMPLEMENT THIS
 }
