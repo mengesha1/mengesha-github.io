@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            
+            let FootballClub = ['Manchester', 'Arsenal', 'Mancity', 'liverpool']
+            let myul = document.createElement('ul');
+            document.body.prepend(myul);
+            for (ele of FootballClub) {
+                let myli = document.createElement('li')
+                myul.append(myli);
+                myli.append(ele)
+            }
+            let lbl = document.createElement('lable');
+            lbl.innerHTML = "Football Club";
+            document.body.prepend(lbl)
+            //myul.before(lbl)
+        }
+    </script>
+</head>
+<body>
+   
+</body>
+</html>
