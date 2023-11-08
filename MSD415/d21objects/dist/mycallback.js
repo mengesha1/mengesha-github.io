@@ -19,3 +19,4 @@ function cubeSquare(num) {
 console.group("expext 1000:", mycallback(cube, 10));
 console.group("expext 125:", mycallback(cube, 5));
 console.group("expext 25:", mycallback(cubeSquare, 5));
+export {};
