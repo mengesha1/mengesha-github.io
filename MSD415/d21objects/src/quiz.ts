@@ -1,27 +1,9 @@
-import { count } from "console";
+//import { count } from "console";
 
-export type student = {
+export type Student = {
     id: number
     quizAnswers: number[];
 }
-
-
-const student1 = {
-    studentid: 101,
-    quizAnswers: [1, 1, 2, 4]
-};
-const student2 = {
-    studentid: 102,
-    quizAnswers: [2, 1, 2, 2]
-};
-const student3 = {
-    studentid: 103,
-    quizAnswers: [3, 1, 3, 4]
-}
-const correctAnswers = [3, 1, 2, 4];
-
-
-// console.log(gradeQuiz([1, 1, 2, 4], correctAnswers));
 
 
 export function gradeStudent(quizarray: number[], quizAnswers: number[]): number {
@@ -59,18 +41,18 @@ type Quizlabl = [{
 }];
 export function gradeQuizLabeled(gradeQ:number[][]=[],studid: number[]):Quizlabl{
   
- const arrAnswers:Quizlabl = [{id:,score:}]
+//  const arrAnswers:Quizlabl = [{id:,score:}]
     
-    for (let i = 0; i < gradeQ.length; i++) {
-        let count = 0;
-        for (let j = 0; j < gradeQ[i].length; j++) {
-            if (gradeQ[i][j] === studid[j]) {
-                count++;
-            }
-           arrAnswers = [{id:studid[j],score:count}]
-        }
-    }
-    return arrAnswers;
-}
+//     for (let i = 0; i < gradeQ.length; i++) {
+//         let count = 0;
+//         for (let j = 0; j < gradeQ[i].length; j++) {
+//             if (gradeQ[i][j] === studid[j]) {
+//                 count++;
+//             }
+//            arrAnswers = [{id:studid[j],score:count}]
+//         }
+//     }
+//     return arrAnswers;
+// }
 //IMPLEMENT THIS
 

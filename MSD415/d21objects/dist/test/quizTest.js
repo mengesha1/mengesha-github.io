@@ -1,5 +1,5 @@
 /* comment out the import assert line (in /dist/test js mocha file) when running in the browser */
-import { assert } from "chai";
+// import { assert } from "chai";
 import { gradeStudent, gradeQuiz, gradeQuizLabeled } from "../src/quiz.js"; //import all of the app.js functions used in the Mocha tests
 describe("quiz tests", function () {
     const student1 = {
@@ -15,7 +15,7 @@ describe("quiz tests", function () {
         quizAnswers: [3, 1, 3, 4]
     };
     const CORRECT_ANSWERS = [3, 1, 2, 4];
-    const studentQuizzes = [student1, student2, student3];
+    const studentQuizzes = [student1.quizAnswers, student2.quizAnswers, student3.quizAnswers];
     it("gradeStudent -- grade for 1 student", function () {
         assert.deepEqual(gradeStudent(student1.quizAnswers, CORRECT_ANSWERS), 3);
     });
