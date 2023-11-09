@@ -26,20 +26,57 @@ export function showTitles() {
         textArea.innerHTML = titleString;
     }
 }
+export function showAuthor() {
+    /* this function is complete, no need to modify.  Inspect it as an example for the other functions. */
+    /* put all titles into an array, then sort, then join with newline and insert in textarea innerHTML */
+    const authors = findAuthors();
+    /*need to sort and then join the titles still (e.g., someArray.join("\n")  */
+    authors.sort();
+    const authorString = authors.join("\n");
+    let textArea = document.getElementById("displayArea");
+    if (textArea) {
+        textArea.innerHTML = authorString;
+    }
+}
+export function showID() {
+    /* this function is complete, no need to modify.  Inspect it as an example for the other functions. */
+    /* put all titles into an array, then sort, then join with newline and insert in textarea innerHTML */
+    const id = findIDs();
+    /*need to sort and then join the titles still (e.g., someArray.join("\n")  */
+    id.sort();
+    const idString = id.join("\n");
+    let textArea = document.getElementById("displayArea");
+    if (textArea) {
+        textArea.innerHTML = idString;
+    }
+}
 /**
  *
  * @return {object} array holding all titles as elements
  */
 export function findTitles() {
+    let title = [];
+    for (const book of library) {
+        title.push(book.title);
+    }
     //fix this to work according to the specs
-    let titles = ["This is a test title", "Another test title", "And another test title for good measure"];
-    return titles;
+    // let titles = ["This is a test title", "Another test title", "And another test title for good measure"];  
+    return title.sort();
 }
 /**
  * @returns {undefined} no return
  * Event handler for Add book button.  Creates and adds book to the library
  */
 export function addBook() {
+    let title = document.getElementById("title");
+    let author = document.getElementById("author");
+    let libraryID = document.getElementById("libraryID");
+    let titleValue = title.value;
+    let authorValue = author.value;
+    let libraryidValue = +libraryID.value;
+    let newlyAddedBook = createBook(titleValue, authorValue, libraryidValue);
+    console.log(newlyAddedBook);
+    console.log(findAuthors());
     console.log("finish the implementation -- get the author, create a book object, and add to the library array!!");
 }
 /**
@@ -48,6 +85,11 @@ export function addBook() {
  */
 export function findAuthors() {
     //implement this
+    let author = [];
+    for (const book of library) {
+        author.push(book.author);
+    }
+    return author.sort();
 }
 /**
  *
@@ -55,6 +97,11 @@ export function findAuthors() {
 */
 export function findIDs() {
     //implement this
+    let libraryIDs = [];
+    for (const book of library) {
+        libraryIDs.push(book.libraryID);
+    }
+    return libraryIDs.sort();
 }
 /**
  * @returns {book} new book object
@@ -62,7 +109,9 @@ export function findIDs() {
 which will be represented as a global array named libraryBooks.  createBook should return the newly created book.
  */
 export function createBook(title, author, libraryID) {
-    //implement this
+    let newlyCreated = { title: title, author: author, libraryID: libraryID };
+    library.push(newlyCreated);
+    return newlyCreated;
 }
 /**
  *
@@ -70,4 +119,21 @@ export function createBook(title, author, libraryID) {
  */
 export function scramble() {
     console.log("implement scramble if you have time ...");
+    const titles = findTitles();
+    /*need to sort and then join the titles by their length (e.g., someArray.join("\n")  */
+    let titleSplit = titles.join(" ").split(" ");
+    titleSplit.sort((a, b) => a.length - b.length);
+    let titleString = titleSplit[0];
+    for (let i = 1; i < titleSplit.length; i++) {
+        if (titleSplit[i].length === titleSplit[i - 1].length) {
+            titleString += " " + titleSplit[i];
+        }
+        else {
+            titleString += "\n" + titleSplit[i];
+        }
+    }
+    let textArea = document.getElementById("displayArea");
+    if (textArea) {
+        textArea.innerHTML = titleString;
+    }
 }
