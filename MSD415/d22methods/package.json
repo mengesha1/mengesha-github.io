@@ -16,8 +16,12 @@
         "typescript": "^5.1.6"
     },
     "mocha": {
-        "extensions": ["ts"],
-        "spec": ["./test/*.ts"],
+        "extensions": [
+            "ts"
+        ],
+        "spec": [
+            "./test/*.ts"
+        ],
         "node-option": [
             "experimental-specifier-resolution=node",
             "loader=ts-node/esm"

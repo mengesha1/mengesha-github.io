@@ -1,13 +1,17 @@
 
 
 export const calculator = {
-   num:number[];
-   operand:string;
-};  // implement this
+    operand1: 0,
+    operand2: 0,
+    setValues: function (value1: number, value2: number) {
+        this.operand1 = value1;
+        this.operand2 = value2;
+    },
+    sum: function (): number {
+        return this.operand1 + this.operand2
+    },
+    mul: function (): number {
+        return this.operand1 * this.operand2
+    }
 
-num: calculator =[0,1,2,3,4,5,6,7,8,9];
-operand:calculator=['+','-','*','/'];
-function minCalculator(num:number[],operand)num;number{
-    for
-    switch(operand.calculator==)
-}
+};  // implement this
