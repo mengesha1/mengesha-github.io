@@ -22,7 +22,8 @@ export  function myMap(numbers: number[], callBack: (n: number) => number): numb
     let funarry: number[] = [];
 
     for (let i = 0; i < numbers.length; i++) {
-        funarry.push(callBack[numbers[i]]);
+        let num = numbers[i];
+        funarry.push(callBack(num));
     }
     return funarry;
 }

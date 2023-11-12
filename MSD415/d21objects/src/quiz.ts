@@ -33,7 +33,7 @@ export function gradeQuiz(stdanswer: number[][], correctAnswers: number[]): numb
 //IMPLEMENT THIS
 
 
-//let studId =[student1.studentid, student2.studentid, student3.studentid];
+/*//let studId =[student1.studentid, student2.studentid, student3.studentid];
 // let gradeQ = gradeQuiz();
 type Quizlabl = [{
     id: number;
@@ -54,5 +54,5 @@ export function gradeQuizLabeled(gradeQ:number[][]=[],studid: number[]):Quizlabl
 //     }
 //     return arrAnswers;
 // }
-//IMPLEMENT THIS
+//IMPLEMENT THIS*/
 

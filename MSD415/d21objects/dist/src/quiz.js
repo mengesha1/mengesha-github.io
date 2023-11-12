@@ -22,22 +22,17 @@ export function gradeQuiz(stdanswer, correctAnswers) {
     }
     return gardQ;
 }
-export function gradeQuizLabeled(gradeQ = [], studid) {
-    //  const arrAnswers:Quizlabl = [{id:,score:}]
-    //     for (let i = 0; i < gradeQ.length; i++) {
-    //         let count = 0;
-    //         for (let j = 0; j < gradeQ[i].length; j++) {
-    //             if (gradeQ[i][j] === studid[j]) {
-    //                 count++;
-    //             }
-    //            arrAnswers = [{id:studid[j],score:count}]
-    //         }
-    //     }
-    //     return arrAnswers;
-    // }
-    //IMPLEMENT THIS
-}
+//IMPLEMENT THIS
+/*//let studId =[student1.studentid, student2.studentid, student3.studentid];
+// let gradeQ = gradeQuiz();
+type Quizlabl = [{
+    id: number;
+    score: number
+}];
+export function gradeQuizLabeled(gradeQ:number[][]=[],studid: number[]):Quizlabl{
+  
 //  const arrAnswers:Quizlabl = [{id:,score:}]
+    
 //     for (let i = 0; i < gradeQ.length; i++) {
 //         let count = 0;
 //         for (let j = 0; j < gradeQ[i].length; j++) {
@@ -49,4 +44,4 @@ export function gradeQuizLabeled(gradeQ = [], studid) {
 //     }
 //     return arrAnswers;
 // }
-//IMPLEMENT THIS
+//IMPLEMENT THIS*/

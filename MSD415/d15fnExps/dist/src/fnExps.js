@@ -16,7 +16,8 @@ export function times100(num) {
 export function myMap(numbers, callBack) {
     let funarry = [];
     for (let i = 0; i < numbers.length; i++) {
-        funarry.push(callBack[numbers[i]]);
+        let num = numbers[i];
+        funarry.push(callBack(num));
     }
     return funarry;
 }
