@@ -10,7 +10,6 @@ export function filterRange(arr: number[], a: number, b: number): number[] {
     
 }
 
-
 type SurnameUser = {
     name: string;
     surname: string;
@@ -26,7 +25,7 @@ type FullNameUser = {
 export function map2fullName(users: SurnameUser[]): FullNameUser[] {
     // FURTHER IMPLEMENTATION REQUIRED HERE
     const result: FullNameUser[] = users.map((user) => {
-        const fullName = `${user.name} ${user.surname}`;
+        const fullName = user.name + user.surname;
         return { fullName, id: user.id };
     });
 

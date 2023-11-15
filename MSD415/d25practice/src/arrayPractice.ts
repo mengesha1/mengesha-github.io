@@ -31,26 +31,29 @@ export function filterOver10(peopleArray:Person[]) {
 
 }
 
-export function findEvenNum(numArray: number[]):number{
-    const firstEvenNum: number | undefined = numArray.find((num) => num % 2 === 0);
+export function findEvenNum(numArray: number[]):number|undefined{
+    const firstEvenNum = numArray.find((num) => num % 2 === 0);
     
     return firstEvenNum
 
 }
 
-export function findEvenAge(peopleArray: Person[]){
-    const firstAgeOver10: Person | undefined = peopleArray.find((person) => person.age > 10);    
+export function findEvenAge(peopleArray: Person[]):number {
+    const firstAgeOver10: Person = peopleArray.find((person) => person.age > 10);    
     return firstAgeOver10
 
 }
 
-// export function includesEvenNum(numArray: number[]):void{
-//     return
+export function includesEvenNum(numArray: number[]):void{
+   
+if (numArray.includes(num))
+    return
 
 // }
 
-// export function includesEvenAge(peopleArray: Person[]):void{
-//     return 
+ export function includesEvenAge(peopleArray: Person[]):void{
+     const hasEvenAge: boolean = peopleArray.map(person => person.age).includes(age => age % 2 === 0);
+    return 
 
 // }
 
