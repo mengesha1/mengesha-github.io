@@ -14,7 +14,7 @@ export function maxOfThree(aa: number, b: number, c: number): number {
         return b;
     else
         return c;
-}  //IMPLEMENT THIS -- DO NOT USE MATH.MAX
+}  
 
 /**
  * 
@@ -26,7 +26,7 @@ export function sum(arr: number[]): number {
     for (let ele of arr) {
         sum += ele;
     }
-    return sum; //IMPLEMENT THIS 
+    return sum; 
 }
 
 
@@ -42,7 +42,7 @@ export function multiply(arr: number[]): number {
         product *= ele;
     }
     return product;
-    //IMPLEMENT THIS 
+    
 }
 
 /* findLongestWord */

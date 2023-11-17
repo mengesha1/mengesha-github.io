@@ -1,4 +1,3 @@
-export { collectRoomNumbers, collectRoomsAndCapacities, collectLabeledRoomCapscountStudentsInClassroom, findClassroomsWithCapacity, findStudentsOlderThan, averageStudentAge }; //implement these
 export const classrooms = [
     {
         roomNumber: 101,
@@ -29,7 +28,7 @@ export const classrooms = [
 ];
 //const roomNumber = [roomNumber1, roomNumber2, roomNumber3]
 //1.	Write a function collectRoomNumbers that will return an array of all the room nmbers.
-function collectRoomNumbers(classrooms) {
+export function collectRoomNumbers(classrooms) {
     const roomNumbers = classrooms.map(room => room.roomNumber);
     //for(const  room of classrooms ){
     //   roomNumbers.push(room.roomNumber);
@@ -39,7 +38,7 @@ function collectRoomNumbers(classrooms) {
 }
 //2.	Write a function collectRoomsAndCapacities to return an array with room numbers and capacities in this 
 //string format:  [“101::30”, :102::25”, “103::35”].
-function collectRoomsAndCapacities(classrooms) {
+export function collectRoomsAndCapacities(classrooms) {
     const capacity = [];
     for (const capa of classrooms) {
         let concatedstr = capa.roomNumber + "::" + capa.capacity;
@@ -67,7 +66,7 @@ export function countStudentsInClassroom(classrooms, roomNumber) {
 }
 //5.	Create a function findClassroomsWithCapacity(classrooms, minCapacity) that takes the classrooms array and a
 //minimum capacity as parameters and returns an array of classroom objects that meet or exceed the specified capacity.
-function findClassroomsWithCapacity(classrooms, minCapacity) {
+export function findClassroomsWithCapacity(classrooms, minCapacity) {
     // classrooms.filter(classroom => classroom.capacity >= minCapacity);
     const result = [];
     for (const room of classrooms) {
@@ -79,7 +78,7 @@ function findClassroomsWithCapacity(classrooms, minCapacity) {
 }
 //6.	Create a function findStudentsOlderThan(classrooms, minAge) that takes the classrooms array and a minimum 
 //age as parameters and returns an array of student objects who are older than the specified age, along with the name of their classroom.
-function findStudentsOlderThan(classrooms, minAge) {
+export function findStudentsOlderThan(classrooms, minAge) {
     const result = [];
     for (const room of classrooms) {
         for (const stud of room.students) {
@@ -95,7 +94,7 @@ function findStudentsOlderThan(classrooms, minAge) {
 the average age of students across all classrooms.
 
  */
-function averageStudentAge(classrooms) {
+export function averageStudentAge(classrooms) {
     let total = 0;
     let avg = 0;
     for (const room of classrooms) {
