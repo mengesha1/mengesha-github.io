@@ -46,8 +46,8 @@ function findHighestScorer(players: Player[]): JerseyPoints | null {
 }
 
 // Test
-const highestScorer = findHighestScorer(teamStats);
-console.log("Highest Scorer:", highestScorer);
+// const highestScorer = findHighestScorer(teamStats);
+// console.log("Highest Scorer:", highestScorer);
 
 
 
