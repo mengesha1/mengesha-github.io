@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { ChangeEvent, useRef, useState } from 'react';
 import classNames from 'classnames';
 import dayjs from 'dayjs';
 import _ from 'lodash'
@@ -98,10 +98,15 @@ const tabs = [
 
 const App = () => {
   //Use useState to maintain comments
+  const handleInputValue = (e:ChangeEvent<HTMLTextAreaElement>)=>{
+console.log(e.target.value)
+  }
   const [commentList, setCommentList] = useState<Comment[]>(_.orderBy(defaultList,'like','desc'));
   const[activeType,setActiveType]=useState('hot')
   
-const textareaRef=useRef<HTMLTextAreaElement>(null) 
+  const [inputValue,setInputValue] = useState(" ")
+  
+//const textareaRef=useRef<HTMLTextAreaElement>(null) 
 
   const deleteComment =(rpid:number|String)=>{
   setCommentList(commentList.filter(item=> {item.rpid!==rpid} ))  
@@ -118,16 +123,20 @@ const textareaRef=useRef<HTMLTextAreaElement>(null)
 
   const makePost=()=>{
     //textareaRef.current?.value
-    const newcomment = {
-      rapid:uuid4(),
+    const newcomment: Comment = {
+      rpid: uuid4(),
       user,
-      content:textareaRef.current!.value,
-      ctime:dayjs(Date.now()).format('MM-DD HH:mm'),
-      like:0
-    }
+      content:inputValue ,
+      //textareaRef.current!.value
+      ctime: dayjs(Date.now()).format("MM-DD HH:mm"),
+      like: 0,
+    };
+
     setCommentList([... commentList, newcomment]);
-    content:textareaRef.current!.value=''
-    content:textareaRef.current!.focus();
+    //content:textareaRef.current!.value=''
+    setInputValue(" ");
+    //content: inputValue.current!.focus();
+    //content:textareaRef.current!.focus();
   }
   //Use map to list comments, don’t forget key
   
@@ -171,7 +180,10 @@ const textareaRef=useRef<HTMLTextAreaElement>(null)
           <div className="reply-box-wrap">
             {/* comment */}
             <textarea
-              ref={textareaRef}
+              //ref={textareaRef}
+             
+              onChange={handleInputValue}
+              value={inputValue}
               className="reply-box-textarea"
               placeholder="tell something..."
             />
